@@ -1,0 +1,7 @@
+# on démarre de moteur de réécriture
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# on réécrit l'URL
+RewriteRule .* index.php [L] 

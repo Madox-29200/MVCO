@@ -1,0 +1,14 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Add Director{% endblock %}
+
+{% block content %}
+
+<h2> Ajout Acteur </h2>
+<form action="addactor" method="POST">
+<input name="first_name" placeholder="prénom"> 
+<input name="last_name" placeholder="nom">
+<input type="submit">
+</form>
+
+{% endblock %}

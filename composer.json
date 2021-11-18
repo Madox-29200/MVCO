@@ -1,0 +1,19 @@
+{
+    "name": "eitheladan/mvco",
+    "type": "project",
+    "autoload": {
+    "psr-4": {
+            "cinema\\": "src"
+    }
+    },
+    "authors": [
+        {
+            "name": "Eitheladan",
+            "email": "eithel57@gmail.com"
+        }
+    ],
+    "require": {
+        "klein/klein": "^2.1",
+        "twig/twig": "^3.3"
+    }
+}

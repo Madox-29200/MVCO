@@ -1,0 +1,28 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Genre{% endblock %}
+
+{% block content %}
+
+<ul>
+
+    {% for movie in movies %}
+
+    <li><h1>{{ movie.title }} </h1></li>
+    <li> <strong>Description : </strong> {{ movie.description }} </li>
+    <li><strong> Durée : </strong>{{ movie.duration }} </li>
+    <li> <strong>Date : </strong>{{ movie.date | date('d/m/Y') }} </li>
+    <li> <strong>Affiche : </strong><a href="{{ movie.coverimage }}" target="_blank"><image style ="width : 100px;"src = "{{ movie.coverimage }}"/></a> </li>
+   
+
+    {% else %}
+
+    Pas d'enregistrement
+       
+    <hr>
+
+    {% endfor %}
+
+</ul>
+
+{% endblock %}

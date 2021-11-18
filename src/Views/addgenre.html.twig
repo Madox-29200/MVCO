@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Add Genre{% endblock %}
+
+{% block content %}
+
+<h2> Ajout Genre </h2>
+<form action="addgenre" method="POST">
+<input type="text" name="name"><br>
+<input type="submit">
+</form>
+
+{% endblock %}

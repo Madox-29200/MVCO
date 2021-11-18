@@ -1,0 +1,29 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Movie{% endblock %}
+
+{% block content %}
+
+    <h1>{{ movie.title }} - ({{ movie.date | date('d/m/Y') }})</h1> 
+    <small>
+    Genre : {{movie.genre.name}}<br>Directeur : {{movie.director.first_name}} {{movie.director.last_name}}
+
+    </small>
+
+    <div>
+    <a href="{{ movie.coverimage }}" target="_blank"><image style ="width : 100px;"src = "{{ movie.coverimage }}"/></a>
+    </div>
+
+    <p>{{ movie.description }}</p>
+    <small>{{ movie.duration }}</small>
+
+    <h2>Acteurs</h2>
+
+    {%for actor in movie.actors %}
+
+        {{actor.first_name}} {{actor.last_name}}<br>
+
+      {# Liste déroulant avec acteurs déjà rentrée #}
+
+        {% endfor %}
+{% endblock %}
